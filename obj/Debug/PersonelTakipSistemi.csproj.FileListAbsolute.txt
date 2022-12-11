@@ -1,0 +1,15 @@
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\PersonelTakipSistemi.exe.config
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\PersonelTakipSistemi.exe
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\PersonelTakipSistemi.pdb
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\EntityFramework.dll
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\EntityFramework.SqlServer.dll
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\EntityFramework.xml
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\bin\Debug\EntityFramework.SqlServer.xml
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.csproj.AssemblyReference.cache
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.Form1.resources
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.Properties.Resources.resources
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.csproj.GenerateResource.cache
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.csproj.CoreCompileInputs.cache
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.csproj.CopyComplete
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.exe
+D:\BTKAKADEMİ\Projeler\PersonelTakipSistemi\obj\Debug\PersonelTakipSistemi.pdb

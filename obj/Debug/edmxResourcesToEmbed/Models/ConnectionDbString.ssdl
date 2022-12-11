@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PDKSDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Belgeler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="BelgeAdi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="DosyaYolu" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BelgeTipi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departmanlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmanAdi" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="IzinTakip">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="IzinTalepTarihi" Type="date" Nullable="false" />
+    <Property Name="IzinBaslangicTarihi" Type="date" Nullable="false" />
+    <Property Name="İzinBitisTarihi" Type="date" Nullable="false" />
+    <Property Name="IzinliGunSayisi" Type="int" Nullable="false" />
+    <Property Name="IzinTipi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonelCocuk">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="CocukAdi" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CocukDogumTarihi" Type="date" Nullable="false" />
+    <Property Name="CocukCinsiyet" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonelEgitim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="EgitimBilgisi" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonelKiyafet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="DepartmanId" Type="int" Nullable="false" />
+    <Property Name="IstekNedeni" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Renk" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Model" Type="int" Nullable="false" />
+    <Property Name="UstBedenNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="AltBedenNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="KafaBedenNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="AyakkabiNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="Boy" Type="int" />
+    <Property Name="Kilo" Type="int" />
+  </EntityType>
+  <EntityType Name="PersonelOzlukBilgileri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TcKimlik" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Unvan" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="KurumSicilNo" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="CepTelefonu" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Eposta" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MedeniDurum" Type="bit" Nullable="false" />
+    <Property Name="EvAdresi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Askerlik" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ehliyet" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="EngellilikDurumu" Type="bit" Nullable="false" />
+    <Property Name="DepartmanId" Type="int" Nullable="false" />
+    <Property Name="DogumTarihi" Type="date" Nullable="false" />
+    <Property Name="İseGirisTarihi" Type="date" Nullable="false" />
+    <Property Name="AktifPasif" Type="bit" Nullable="false" />
+    <Property Name="CikisTarihi" Type="date" />
+    <Property Name="EsiTc" Type="nvarchar" MaxLength="11" />
+    <Property Name="EsiAdiSoyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="EsiTelefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="EsiIsDurumu" Type="bit" />
+  </EntityType>
+  <EntityType Name="PersonelPuantaj">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="CalismaGunu" Type="date" Nullable="false" />
+    <Property Name="GirisSaati" Type="datetime" Nullable="false" />
+    <Property Name="CikisSaati" Type="datetime" Nullable="false" />
+    <Property Name="Mazeret" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonelSaglikDurumlari">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelId" Type="int" Nullable="false" />
+    <Property Name="Alerji" Type="bit" Nullable="false" />
+    <Property Name="KalpHastaligi" Type="bit" Nullable="false" />
+    <Property Name="KasEklem" Type="bit" Nullable="false" />
+    <Property Name="GormeKusuru" Type="bit" Nullable="false" />
+    <Property Name="IsitmeKaybi" Type="bit" Nullable="false" />
+    <Property Name="BagisiklikGuclugu" Type="bit" Nullable="false" />
+    <Property Name="KronikHastalik" Type="bit" Nullable="false" />
+    <Property Name="AstimKoah" Type="bit" Nullable="false" />
+    <Property Name="SindirimRahatsizliklari" Type="bit" Nullable="false" />
+    <Property Name="Aciklama" Type="nvarchar(max)" />
+    <Property Name="RuhsalHastalik" Type="bit" Nullable="false" />
+    <Property Name="ZihinselHastalik" Type="bit" Nullable="false" />
+    <Property Name="KanGrubu" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Belgeler_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="Belgeler" Type="Self.Belgeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Belgeler">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IzinTakip_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="IzinTakip" Type="Self.IzinTakip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IzinTakip">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelCocuk_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="PersonelCocuk" Type="Self.PersonelCocuk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonelCocuk">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelEgitim_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="PersonelEgitim" Type="Self.PersonelEgitim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonelEgitim">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelKiyafet_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="PersonelKiyafet" Type="Self.PersonelKiyafet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonelKiyafet">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelOzlukBilgileri_Departmanlar">
+    <End Role="Departmanlar" Type="Self.Departmanlar" Multiplicity="1" />
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departmanlar">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="DepartmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelPuantaj_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="PersonelPuantaj" Type="Self.PersonelPuantaj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonelPuantaj">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelSaglikDurumlari_PersonelOzlukBilgileri">
+    <End Role="PersonelOzlukBilgileri" Type="Self.PersonelOzlukBilgileri" Multiplicity="1" />
+    <End Role="PersonelSaglikDurumlari" Type="Self.PersonelSaglikDurumlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonelOzlukBilgileri">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonelSaglikDurumlari">
+        <PropertyRef Name="PersonelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PDKSDbModelStoreContainer">
+    <EntitySet Name="Belgeler" EntityType="Self.Belgeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departmanlar" EntityType="Self.Departmanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IzinTakip" EntityType="Self.IzinTakip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelCocuk" EntityType="Self.PersonelCocuk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelEgitim" EntityType="Self.PersonelEgitim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelKiyafet" EntityType="Self.PersonelKiyafet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelOzlukBilgileri" EntityType="Self.PersonelOzlukBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelPuantaj" EntityType="Self.PersonelPuantaj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelSaglikDurumlari" EntityType="Self.PersonelSaglikDurumlari" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Belgeler_PersonelOzlukBilgileri" Association="Self.FK_Belgeler_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="Belgeler" EntitySet="Belgeler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IzinTakip_PersonelOzlukBilgileri" Association="Self.FK_IzinTakip_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="IzinTakip" EntitySet="IzinTakip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelCocuk_PersonelOzlukBilgileri" Association="Self.FK_PersonelCocuk_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="PersonelCocuk" EntitySet="PersonelCocuk" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelEgitim_PersonelOzlukBilgileri" Association="Self.FK_PersonelEgitim_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="PersonelEgitim" EntitySet="PersonelEgitim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelKiyafet_PersonelOzlukBilgileri" Association="Self.FK_PersonelKiyafet_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="PersonelKiyafet" EntitySet="PersonelKiyafet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelOzlukBilgileri_Departmanlar" Association="Self.FK_PersonelOzlukBilgileri_Departmanlar">
+      <End Role="Departmanlar" EntitySet="Departmanlar" />
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelPuantaj_PersonelOzlukBilgileri" Association="Self.FK_PersonelPuantaj_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="PersonelPuantaj" EntitySet="PersonelPuantaj" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelSaglikDurumlari_PersonelOzlukBilgileri" Association="Self.FK_PersonelSaglikDurumlari_PersonelOzlukBilgileri">
+      <End Role="PersonelOzlukBilgileri" EntitySet="PersonelOzlukBilgileri" />
+      <End Role="PersonelSaglikDurumlari" EntitySet="PersonelSaglikDurumlari" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

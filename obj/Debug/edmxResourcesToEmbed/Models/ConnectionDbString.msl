@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PDKSDbModelStoreContainer" CdmEntityContainer="PDKSDbEntities">
+    <EntitySetMapping Name="Belgeler">
+      <EntityTypeMapping TypeName="PDKSDbModel.Belgeler">
+        <MappingFragment StoreEntitySet="Belgeler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="BelgeAdi" ColumnName="BelgeAdi" />
+          <ScalarProperty Name="DosyaYolu" ColumnName="DosyaYolu" />
+          <ScalarProperty Name="BelgeTipi" ColumnName="BelgeTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departmanlar">
+      <EntityTypeMapping TypeName="PDKSDbModel.Departmanlar">
+        <MappingFragment StoreEntitySet="Departmanlar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DepartmanAdi" ColumnName="DepartmanAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IzinTakip">
+      <EntityTypeMapping TypeName="PDKSDbModel.IzinTakip">
+        <MappingFragment StoreEntitySet="IzinTakip">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="IzinTalepTarihi" ColumnName="IzinTalepTarihi" />
+          <ScalarProperty Name="IzinBaslangicTarihi" ColumnName="IzinBaslangicTarihi" />
+          <ScalarProperty Name="İzinBitisTarihi" ColumnName="İzinBitisTarihi" />
+          <ScalarProperty Name="IzinliGunSayisi" ColumnName="IzinliGunSayisi" />
+          <ScalarProperty Name="IzinTipi" ColumnName="IzinTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelCocuk">
+      <EntityTypeMapping TypeName="PDKSDbModel.PersonelCocuk">
+        <MappingFragment StoreEntitySet="PersonelCocuk">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="CocukAdi" ColumnName="CocukAdi" />
+          <ScalarProperty Name="CocukDogumTarihi" ColumnName="CocukDogumTarihi" />
+          <ScalarProperty Name="CocukCinsiyet" ColumnName="CocukCinsiyet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelEgitim">
+      <EntityTypeMapping TypeName="PDKSDbModel.PersonelEgitim">
+        <MappingFragment StoreEntitySet="PersonelEgitim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="EgitimBilgisi" ColumnName="EgitimBilgisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelKiyafet">
+      <EntityTypeMapping TypeName="PDKSDbModel.PersonelKiyafet">
+        <MappingFragment StoreEntitySet="PersonelKiyafet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="DepartmanId" ColumnName="DepartmanId" />
+          <ScalarProperty Name="IstekNedeni" ColumnName="IstekNedeni" />
+          <ScalarProperty Name="Renk" ColumnName="Renk" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="UstBedenNo" ColumnName="UstBedenNo" />
+          <ScalarProperty Name="AltBedenNo" ColumnName="AltBedenNo" />
+          <ScalarProperty Name="KafaBedenNo" ColumnName="KafaBedenNo" />
+          <ScalarProperty Name="AyakkabiNo" ColumnName="AyakkabiNo" />
+          <ScalarProperty Name="Boy" ColumnName="Boy" />
+          <ScalarProperty Name="Kilo" ColumnName="Kilo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelOzlukBilgileri">
+      <EntityTypeMapping TypeName="PDKSDbModel.PersonelOzlukBilgileri">
+        <MappingFragment StoreEntitySet="PersonelOzlukBilgileri">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TcKimlik" ColumnName="TcKimlik" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+          <ScalarProperty Name="KurumSicilNo" ColumnName="KurumSicilNo" />
+          <ScalarProperty Name="CepTelefonu" ColumnName="CepTelefonu" />
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="MedeniDurum" ColumnName="MedeniDurum" />
+          <ScalarProperty Name="EvAdresi" ColumnName="EvAdresi" />
+          <ScalarProperty Name="Askerlik" ColumnName="Askerlik" />
+          <ScalarProperty Name="Ehliyet" ColumnName="Ehliyet" />
+          <ScalarProperty Name="EngellilikDurumu" ColumnName="EngellilikDurumu" />
+          <ScalarProperty Name="DepartmanId" ColumnName="DepartmanId" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="İseGirisTarihi" ColumnName="İseGirisTarihi" />
+          <ScalarProperty Name="AktifPasif" ColumnName="AktifPasif" />
+          <ScalarProperty Name="CikisTarihi" ColumnName="CikisTarihi" />
+          <ScalarProperty Name="EsiTc" ColumnName="EsiTc" />
+          <ScalarProperty Name="EsiAdiSoyadi" ColumnName="EsiAdiSoyadi" />
+          <ScalarProperty Name="EsiTelefon" ColumnName="EsiTelefon" />
+          <ScalarProperty Name="EsiIsDurumu" ColumnName="EsiIsDurumu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelPuantaj">
+      <EntityTypeMapping TypeName="PDKSDbModel.PersonelPuantaj">
+        <MappingFragment StoreEntitySet="PersonelPuantaj">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="CalismaGunu" ColumnName="CalismaGunu" />
+          <ScalarProperty Name="GirisSaati" ColumnName="GirisSaati" />
+          <ScalarProperty Name="CikisSaati" ColumnName="CikisSaati" />
+          <ScalarProperty Name="Mazeret" ColumnName="Mazeret" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelSaglikDurumlari">
+      <EntityTypeMapping TypeName="PDKSDbModel.PersonelSaglikDurumlari">
+        <MappingFragment StoreEntitySet="PersonelSaglikDurumlari">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="Alerji" ColumnName="Alerji" />
+          <ScalarProperty Name="KalpHastaligi" ColumnName="KalpHastaligi" />
+          <ScalarProperty Name="KasEklem" ColumnName="KasEklem" />
+          <ScalarProperty Name="GormeKusuru" ColumnName="GormeKusuru" />
+          <ScalarProperty Name="IsitmeKaybi" ColumnName="IsitmeKaybi" />
+          <ScalarProperty Name="BagisiklikGuclugu" ColumnName="BagisiklikGuclugu" />
+          <ScalarProperty Name="KronikHastalik" ColumnName="KronikHastalik" />
+          <ScalarProperty Name="AstimKoah" ColumnName="AstimKoah" />
+          <ScalarProperty Name="SindirimRahatsizliklari" ColumnName="SindirimRahatsizliklari" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="RuhsalHastalik" ColumnName="RuhsalHastalik" />
+          <ScalarProperty Name="ZihinselHastalik" ColumnName="ZihinselHastalik" />
+          <ScalarProperty Name="KanGrubu" ColumnName="KanGrubu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
